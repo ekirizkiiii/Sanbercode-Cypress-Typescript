@@ -11,11 +11,6 @@ export class CartPage{
     
     btn_checkout = '#checkout'
 
-    sauceLabsBackpack(){
-        cy.contains(this.link_sauceLabsBackpack).click()
-        cy.contains('Sauce Labs Backpack').should('be.visible') 
-    }
-
     verifyListProductInCart(){
         cy.get(this.lbl_name_sauceLabsBackpack).invoke('text').as('lblNameItem4Cart');
         cy.get(this.btn_remove_sauceLabsBackpack).prev().invoke('text').as('lblPriceItem4Cart')
